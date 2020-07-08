@@ -1,0 +1,254 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Marvel&display=swap');
+/*  fonte gratiuta do  google */
+* {
+    box-sizing: border-box;
+    /* Iguala todas as caixas do html */
+}
+body {
+    font-family: 'Marvel', sans-serif;
+    /* O link da fonte do google é linkado aqui. O nome da fonte é Marvel. Dados pegos no site da fonte, do mesmo que pegamos o link.  */
+    color: #fff;
+    background-color: #2ba8d9;
+    }
+main {
+    overflow: hidden;
+    width: 100%; 
+    /* Tomar cuidado com a porcentagem colocada, pois ela pode ocupar toda a tela, se for uma pequena ou grande. Neste caso o main vai ocupar tudo pq ele ocupa todo o body  */
+    max-width: 1600px; 
+    /* Limitação que eu quero que o width ocupa em uma tela, que nesse caso é de 1600px */
+    margin:0 auto;
+    /* magin auto o navegador escolhe automaticamente a margem, maior percebido em fotos menores */
+}
+
+/* (ESTILO DO TOPO E MENU) */
+ header{
+     background-color: #2ba8d9;
+     height: 180px;
+     padding: 0.7em;
+
+ }
+
+ header > img{
+     float: left;
+     margin: 15px; 
+ }
+
+ header > nav {
+     overflow: hidden;
+     width: 250px;
+     float: right;
+ }
+
+ header > nav > ul {
+     list-style: none; }
+     /* Tira os pontos da lista  */
+
+header > nav > li {
+   padding-right: 5px;
+}     
+
+header > nav > ul > li > a:link {
+    /* O link tem vários status  */
+    display: block;
+    /* Colocar dentro de um bloco  */
+    font-size: 1.4em;
+    /* Tamanho do texto  */
+    text-align: center;
+    /* Posição do texto na página  */
+    text-decoration: none;
+    /* Tira o sublinahdo do link */
+    color: #fff;
+    /* Cor do texto  */
+    height: 40px;
+    /* Altura para o texto, que nesse caso é o link */
+    font-weight: bolder;
+    /* Mais forte que o negrito, que é bolde */
+    line-height: 1.4em;
+    background-color: #ff675a;
+    /* Cor de fundo  */
+    margin-bottom: 10px;
+    /* A margem do debaixo */
+    border-radius: 10px;
+    /* Deixa a borda mais redonda  */
+    box-shadow: 3px 2px 2px 0 #707070; 
+    /* Sombra da caixa que ficam o link  */
+}
+
+Header > nav > ul > li > a:visited {
+    /* O estado visited do link é quando você clica em cima do link e ele fica azul  */
+    color: white
+    /* Mudar para branco quando clicamos em cima do link  */
+}
+
+header > nav > ul > li > a:hover{
+    /* O estado houver do link é quando você passa o mouse por cima e ele muda de cor  */
+    color: #707070
+    /* Indicando a cor do link  */
+}
+
+/* (ESTILO DOS TÍTULOS DAS SEÇÕES) */
+h1{
+    font-size: 3em;
+    /* tamanho da fonyr  */
+    margin: 0 20px 25px 20px;
+    /* Margens topo, direita, bottom, esquerda  */
+}
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* (SEÇÃO SOBRE)  */
+
+.sobre{
+    /* A classe você chama com o . a seção sobre está linkada no HTML */
+    background-color: #ff675a;
+    padding: 1em;
+    width: 100%; 
+    overflow: hidden;
+}
+
+.sobre > img {
+    /* Seção sobre na imagem  */
+    float: left;
+    margin-right: 20px;
+}
+
+/* (Seção Trabalho) */
+.trabalhos {
+    background-color: #fac17e;
+    padding: 1em;
+    margin-bottom: 3%;
+    overflow: hidden;
+    /* Controla a altura de uma caixa, e não permite que apareça a barra de rolagem, conforme vai colocanod conteúdo vai aumentando */
+
+}
+
+.trabalhos > article  {
+ float: left;
+ width: 30.2%;
+ margin: 0.9em;
+ height: 590px;
+ box-shadow: 3px 2px 2px 0 #707070;
+ text-align: justify;
+ /* Texto dentro da classe justificado */
+ padding: 1em;
+}
+
+.trabalhos > article > img {
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.sites {
+background-color: #2ba8b9;
+}
+
+.sistemas{
+background-color: #ff675a;
+}
+
+.projetos{
+background-color: #63bf9e;
+}
+/* (SEÇÃO CONTATOS) */
+
+.contatos{
+    width: 40%;
+    padding: 30px;
+    float: left;
+    text-align: center;
+}
+
+.contatos > p {
+    font-size: 30px;
+}
+
+iframe{
+    /* Mapa ou vídeo */
+    width: 55%;
+    height: 300px;
+    float: right;
+    margin-right: 20px;
+}
+
+/* (FOOTER) */
+
+footer{
+    float: left;
+    width: 100%;
+    }
+
+footer > img {
+    width: 15%;
+    margin: 5% 40%;
+}
+
+/* (INÍCIO DO LAYOUT PARA DISPOSITIVOS MÍVEIS */
+@media screen and (max-width:950px){
+    .trabalhos > articles{
+        width:30%
+    }
+}
+
+@media screen and (max-width:922px){
+    .sobre > h1 {
+        text-align: center;
+        font-size: 2.8em;
+    }
+}
+
+@media screen and (max-width:768px){
+    .sobre > img {
+        width: 100%;
+    }
+    
+    .sobre > p {
+        font-size: 20px;
+
+    }
+
+    .trabalhos > h1 {
+        text-align: center;
+    }
+
+    .trabalhos > article {
+        width: 29%;
+        }
+
+    .contatos > h1 {
+        font-size: 2.5em;
+    }   
+
+}
+
+@media screen and (max-width:425px){
+    header > img {
+        margin-left: 105px;
+    }
+    header > nav {
+        width: 100%;
+        
+    }
+
+    .sobre > p {
+        font-size: 1em;
+    }
+
+    .trabalhos > article{
+        float: none;
+        width: 100%;
+        margin: 0.9em 0;
+    }
+
+    .trabalhos > article > h2 {
+        font-size: 2em;
+    }        
+    .trabalhos > article > p {
+        font-size: 1.4em;
+    }
+
+}
